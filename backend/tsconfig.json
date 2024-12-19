@@ -1,0 +1,34 @@
+{
+	"ts-node": {
+		"files": true,
+		"transpileOnly": true
+	},
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"downlevelIteration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"strict": true,
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"inlineSources": true,
+		"isolatedModules": false,
+		"lib": ["ES2021", "DOM"],
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"paths": {
+			"*": ["*", "*.js", "*.ts", "*.tsx"]
+		},
+		"target": "ESNext"
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", ".vscode"]
+}

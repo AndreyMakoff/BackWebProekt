@@ -1,0 +1,28 @@
+{
+	"name": "@ideanick/backend",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "node --import ./src/register.js --no-warnings ./src/index.ts",
+		"build": "rimraf ./dist && tsc --build ./tsconfig.json",
+		"start": "node ./dist/index.js",
+		"types": "tsc --noEmit --project ./tsconfig.json",
+		"lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts .",
+		"prettify": "prettier --loglevel warn --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}' '!**/{node_modules,dist}/**/*'"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"prettier": "^3.3.3",
+		"rimraf": "^6.0.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.3",
+		"@types/node": "^20.5.0"
+	},
+	"dependencies": {
+		"@trpc/server": "^10.45.2",
+		"cors": "^2.8.5",
+		"express": "^4.21.1"
+	}
+}
