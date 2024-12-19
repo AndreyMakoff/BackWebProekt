@@ -28,7 +28,7 @@ const ideas = [
 	},
 ];
 
-const myX: string = 3;
+const x: number = 'stirng';
 
 const trpc = initTRPC.create();
 
