@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
+import { Segment } from "../../components/Segment";
 import { type ViewIdeaRouteParams } from "../../lib/routes";
 import { trpc } from "../../lib/trcp.tsx";
+import css from "./index.module.scss";
 
 export const ViewIdeaPage = () => {
   const { ideaNick } = useParams() as ViewIdeaRouteParams;
@@ -22,10 +24,11 @@ export const ViewIdeaPage = () => {
     return <span>Idea not found</span>;
   }
   return (
-    <div>
-      <h1>{data.idea.name}</h1>
-      <p>{data.idea.description}</p>
-      <div dangerouslySetInnerHTML={{ __html: data.idea.text }} />
-    </div>
+    <Segment title={data.idea.name} description={data.idea.description}>
+      <div
+        className={css.text}
+        dangerouslySetInnerHTML={{ __html: data.idea.text }}
+      />
+    </Segment>
   );
 };
